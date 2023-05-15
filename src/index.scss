@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2rem;
+
+	.item {
+		@apply p-4 rounded-md shadow-md flex flex-col justify-center items-start gap-4;
+
+		h1 {
+			@apply text-2xl font-semibold text-slate-700;
+		}
+	}
+}
+
+.heading {
+	min-height: 400px;
+	width: 100%;
+	background: url('https://catherineasquithgallery.com/uploads/posts/2021-02/1614412106_1-p-ovoshchi-na-temnom-fone-1.jpg');
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	@apply shadow-md;
+
+	h1 {
+		color: #fff;
+		font-size: 50px;
+	}
+}
